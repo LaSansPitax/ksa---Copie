@@ -1,0 +1,28 @@
+.Navbar {
+    
+    padding: 2rem 3rem;  
+    display: flex;
+    gap: 2rem;
+    align-items: center ;
+    color: #FF6060; ;
+    font-weight: 500;
+    font-size: 24px;      
+
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: #FF6060;
+        
+}
+
+.Navbar a:hover {
+    text-decoration: underline;
+
+}
+
+.Navbar > *:first-child{
+    margin-right: auto;
+}
+
+

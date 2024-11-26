@@ -1,0 +1,12 @@
+.grid{
+    display: flex;
+    background: rgba(246, 246, 246, 1);
+    margin-top: 270px;
+    min-height: 60vw;
+    border-radius: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
