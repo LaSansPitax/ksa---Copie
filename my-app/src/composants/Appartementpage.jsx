@@ -3,7 +3,7 @@ import './Appartementpage.css'
 
 function Appartementpage() {
   return (
-    <div className='Appartement_containeur'>
+    <div className='main_container'>
         <div>
             <img className='apartement_img' src="./Background.png" alt="Appartement_image" /> 
         </div>
@@ -42,19 +42,28 @@ function Appartementpage() {
        
             <div className='dropdown'>
                 <div className='description'>
-                    <p className='title_description'>description</p>
+                    <p className='title_description'>
+                        <span>Description</span>
+                        <span><i className="fas fa-chevron-up"></i></span>
+                    </p>
                     <p className='description_content'>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
                 </div>
                 <div className='equipements'>
-                    <p className='title_description'>Équipements</p>
-                    <p>Climatisation
-                        Wi-Fi
-                        Cuisine
-                        Espace de travail
-                        Fer à repasser
-                        Sèche-cheveux
-                        Cintres 
-                        </p>
+                    <p className='title_description'>
+                        <span>Équipements</span>
+                        <span><i className="fas fa-chevron-up"></i></span>
+                    </p>
+                    <ul className='list'>
+                        <li>Climatisation</li>
+                        <li>Wi-Fi</li> 
+                        <li>Cuisine</li>
+                        <li>Espace de travail</li> 
+                        <li>Fer à repasser</li>
+                        <li>Sèche-cheveux</li>
+                        <li>Cintres </li> 
+                    </ul>
+                    
+                    
                 </div>
             </div>
           

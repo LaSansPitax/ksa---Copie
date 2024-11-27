@@ -5,10 +5,8 @@ import AppartementGrid from "./composants/AppartementGrid.jsx"
 function Appart() {
   return (
     <div className='main_container'>
-
-    <Banner/>
-    <AppartementGrid/>
-
+      <Banner/>
+      <AppartementGrid/>
     </div>
    
   );

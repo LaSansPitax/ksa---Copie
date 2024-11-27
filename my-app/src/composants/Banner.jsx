@@ -3,9 +3,9 @@ import './Banner.css'
 
 function Banner() {
     return  <div className="Banner">      
-                <img className="Banner_img" src="./IMG.png" alt="BannerImg" /> 
+                <img className="Banner_img" src="./iii.png" alt="BannerImg" /> 
                 <div className="dark_banner"></div>
-                <div className="banner_txt">Chez vous, partout et ailleurs</div>
+                <span className="banner_txt">Chez vous, partout et ailleurs</span>
             </div>
 }
 

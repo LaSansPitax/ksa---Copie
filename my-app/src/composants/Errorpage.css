@@ -1,0 +1,37 @@
+.Error_page_container {
+    text-align: center;
+    color: #FF6060;
+}
+
+.Error_page_number{
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 410.69px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.Error_page_txt {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 7rem;
+}
+
+.Error_page_link{
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

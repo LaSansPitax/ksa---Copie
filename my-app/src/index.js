@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.js';
+
 import Appartementpage from './composants/Appartementpage.jsx'
 import Navbar from './composants/Navbar.jsx';
 import Home from './Home.jsx'
 import Footer from './composants/Footer.jsx';
+import ErrorPage from'./composants/ErrorPage.jsx';
+import About from'./composants/About.jsx';
 import reportWebVitals from './reportWebVitals.js';
 import {createBrowserRouter,RouterProvider,Outlet,} from "react-router-dom";
 
@@ -18,7 +20,7 @@ const HeaderFooterLayout = () => {
 
 export const router = createBrowserRouter([
   {
-    errorElement: <h1>404</h1>,
+    errorElement: <ErrorPage/>,
     element:<HeaderFooterLayout/>,
     children : [
       {
@@ -31,7 +33,7 @@ export const router = createBrowserRouter([
     }, 
       {
         path: "/About",
-        element: <App />,
+        element: <About/>
     },
     
     
