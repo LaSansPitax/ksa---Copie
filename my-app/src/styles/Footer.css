@@ -1,11 +1,12 @@
 .footer{
+
     height: auto;
     background-color: black;
     color: white;
     text-align: center;
     min-height: 200px;
     margin-top: auto;   
-    margin-inline: -15px;
+   
 }
 
 .footer_logo{

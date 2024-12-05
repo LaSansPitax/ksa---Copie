@@ -1,10 +1,10 @@
 .breakdown_group{
-    width: 100%;
+    margin: 20px 100px 0 100Px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .breakdown_description{
@@ -37,3 +37,16 @@
         height: 60%;
         border-radius: 10px;
 }
+
+
+@media (max-width: 768px) {
+    .breakdown_group {
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 50px;
+        }
+    }

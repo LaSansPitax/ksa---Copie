@@ -1,6 +1,8 @@
-import './App.css';
-import Banner from "./composants/Banner.jsx"
-import AppartementGrid from "./composants/AppartementGrid.jsx"
+import '../styles/App.css';
+import Banner from "./Banner.jsx"
+import AppartementGrid from "./AppartementGrid.jsx"
+
+
 
 function Appart() {
   return (

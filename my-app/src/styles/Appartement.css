@@ -1,0 +1,52 @@
+.Appart{
+    position: relative;
+    border-radius: 1rem;
+    background: rgba(255, 96, 96, 1);
+    background: linear-gradient(180deg, rgba(255, 96, 96, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    height: 340px;
+    width: 340px;
+    /* min-width: 200px; */
+    margin-bottom: 20px;
+    
+    
+}
+
+.Appartement_txt{
+    bottom: 0;
+    box-sizing: inherit;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    margin: 15px 20px;
+    position: absolute;
+}
+
+.image_appartement{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        filter: brightness(.9);
+}
+
+
+@media (min-width:320px) and (max-width:767px) {
+
+    .Appart {
+        height: 280px;
+        width: 100%;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.Appart {
+        height: 520px;
+        width: 100%;
+    }
+      
+}
+
+
+

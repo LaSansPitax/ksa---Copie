@@ -1,0 +1,310 @@
+.apartement_img{
+    width: 100%;
+     border-radius: 20px;
+    object-fit: cover;
+     height: 500px;
+}
+
+.main_container{
+    color: #FF6060;
+}
+
+h1{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+h2{
+    font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+}
+
+.Tags{
+    display: flex; 
+    gap : 1rem;  
+}
+
+.appartement_owner{
+    margin-left: auto;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.Appartement_describ{
+    flex-grow: 1;
+}
+
+.Tags span{
+    display: flex;
+    justify-content: center;
+    background-color: #FF6060;
+    color: white;
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+}
+
+.ownerpp{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pp{
+    
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-top: 10px;
+        
+}
+
+
+.Appartement_group {
+    display: flex;
+  
+}
+
+
+
+.Ad{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+    
+}
+
+.host{
+    width: 94px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.raiting{
+    display: flex;
+    font-size: 2rem;
+    margin-left: auto;
+    color: rgba(227, 227, 227, 1);
+}
+
+.on {
+    color: #FF6060;
+}
+
+
+.description{
+    width: 50%;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap : 5rem; 
+    margin-bottom: 60px;
+}
+.title_description{
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+    margin: 1.5em auto 0;
+    padding: .6em 1em;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.carousel-container {
+     position: relative;
+     
+
+ }
+
+.carousel-button {
+    position: absolute;
+    margin: 0 45px 0 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    font-size: 90px;
+    cursor: pointer;
+
+   
+}
+
+.image-counter{
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    color: white;
+}
+
+
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.description_content{
+    background: rgba(246, 246, 246, 1);;
+    color: #FF6060;
+    font-size: 20px;
+    padding: .8em;
+    line-height: 25.67px; 
+    position: relative; 
+    top: -1.5rem;
+    z-index: -1;
+    height: 65%;
+    border-radius: 10px;
+}
+
+.equipements{
+       
+        width: 50%
+}
+
+.list{
+    background: rgba(246, 246, 246, 1);;
+    color: #FF6060;
+    font-size: 20px;
+    padding: .8em;
+    line-height: 25.67px;
+    position: relative;
+    top: -1.5rem;
+    z-index: -1;
+    list-style: none;
+    height: 65%;
+    border-radius: 10px;
+}
+
+.fas {
+   font-size: 34px;
+   cursor: pointer;
+}
+
+
+
+
+@media (min-width:320px) and (max-width:767px) {
+    .Appartement_group {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+    .Tags span {         
+    padding: 5px 11px 5px;
+    font-size: 8px;
+    }
+        
+    .apartement_img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        height: 240px;
+    }
+
+    .appartement_owner {
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        }
+    
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+    
+        .raiting {
+            display: flex;
+            font-size: 2rem;
+            margin-left: 10px;
+            color: rgba(227, 227, 227, 1);
+        }
+    
+        .description {
+            width: 95%;
+        }
+    
+        .equipements {
+            width: 95%;
+        }
+    
+        .carousel-button {
+            position: absolute;
+            margin: 0 5px 0 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            border: none;
+            font-size: 40px;
+            cursor: pointer;
+    
+    
+        }
+    
+        .image-counter {
+            display: none;
+        }
+}
+
+@media (min-width:768) and (max-width:1024px) {
+    .grid {
+        margin: 5%;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grid {
+        margin-top: -25px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
