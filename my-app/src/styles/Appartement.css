@@ -32,6 +32,21 @@
 }
 
 
+
+@media (min-width:0px) and (max-width:320px) {
+
+    .Appart {
+        height: 200px;
+        width: 100%;
+    }
+
+        .Appartement_txt {
+            font-size: 15px;
+        }
+
+
+}
+
 @media (min-width:320px) and (max-width:767px) {
 
     .Appart {

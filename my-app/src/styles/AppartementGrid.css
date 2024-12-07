@@ -12,6 +12,19 @@
     margin-bottom: 3rem;
 }
 
+@media (min-width:0px) and (max-width:320px) {
+    .grid {
+        margin-top: 20px;
+        padding: 0;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
 @media (min-width:320px) and (max-width:767px) {
     .grid {
         margin-top: 5%;
@@ -49,20 +62,7 @@
     }
      
 
-                /* @media only screen and (min-device-width : 320px) {
-                    .grid {
-                        margin-top: 5%;
-        
-                        padding: 0;
-                        background: none;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        min-width: 320px;
-        
-                    }
-                } */
+          
    
 
 

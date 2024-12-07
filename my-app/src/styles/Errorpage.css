@@ -36,6 +36,29 @@
     text-decoration-skip-ink: none;
 }
 
+@media (min-width:0px) and (max-width:320px) {
+
+
+    .Error_page_number {
+        font-size: 100px;
+        margin-bottom: -65px;
+    }
+
+
+
+    .Error_page_txt {
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 10px;
+
+    }
+
+    .Error_page_link {
+
+        font-size: 8px;
+
+    }
+}
 
 
 

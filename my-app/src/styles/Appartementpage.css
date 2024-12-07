@@ -215,7 +215,92 @@ h2{
 }
 
 
+@media (min-width:0px) and (max-width:320px) {
+    .Appartement_group {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
 
+        .Tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            
+            font-size: 100%;
+            
+        }
+        
+    .ownerpp {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+    .Tags span {
+        padding: 5px 11px 5px;
+        font-size: 8px;
+    }
+
+    .apartement_img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        height: 240px;
+    }
+
+    .appartement_owner {
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 60px;
+        align-items: center;
+    }
+
+    .raiting {
+        display: flex;
+        font-size: 2rem;
+        margin-left: 10px;
+        color: rgba(227, 227, 227, 1);
+    }
+
+    .description {
+        width: 95%;
+    }
+
+    .equipements {
+        width: 95%;
+    }
+
+    .carousel-button {
+        position: absolute;
+        margin: 0 5px 0 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        border: none;
+        font-size: 40px;
+        cursor: pointer;
+
+
+    }
+
+    .image-counter {
+        display: none;
+    }
+}
 
 @media (min-width:320px) and (max-width:767px) {
     .Appartement_group {
