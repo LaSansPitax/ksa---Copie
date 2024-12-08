@@ -1,0 +1,116 @@
+.owner-container{
+    margin-left: auto;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.owner-name {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
+
+.owner-name-container {
+        width: 94px;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: right;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    
+}
+
+
+.owner-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.owner-picture{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-top: 10px;
+
+}
+
+
+
+.owner-rating {
+    display: flex;
+    font-size: 2rem;
+    margin-left: auto;
+    color: rgba(227, 227, 227, 1);
+}
+
+.on {
+    color: #FF6060;
+}
+
+
+
+
+@media (min-width:0px) and (max-width:320px) {
+    
+
+
+    .ownerpp {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+
+    .appartement_owner {
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+  
+    .raiting {
+        display: flex;
+        font-size: 2rem;
+        margin-left: 10px;
+        color: rgba(227, 227, 227, 1);
+    }
+
+
+
+}
+
+@media (min-width:320px) and (max-width:767px) {
+
+
+
+
+    .appartement_owner {
+        width: 100%;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+
+    .raiting {
+        display: flex;
+        font-size: 2rem;
+        margin-left: 10px;
+        color: rgba(227, 227, 227, 1);
+    }
+
+
+
+
+}

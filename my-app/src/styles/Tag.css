@@ -1,0 +1,52 @@
+
+.Tags {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.Tags span {
+    display: flex;
+    justify-content: center;
+    background-color: #FF6060;
+    color: white;
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+}
+
+
+
+
+@media (min-width:0px) and (max-width:320px) {
+  
+
+    .Tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+  
+
+    .Tags span {
+        padding: 5px 11px 5px;
+        font-size: 8px;
+    }
+
+}
+
+@media (min-width:320px) and (max-width:767px) {
+
+    .Tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+    .Tags span {
+        padding: 5px 11px 5px;
+        font-size: 8px;
+    }
+
+  
+}

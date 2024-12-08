@@ -1,143 +1,65 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/Appartementpage.css';
-import { useLocation, useNavigate } from "react-router-dom";
+import Dropdown from './Dropdown';
+import Carousel from './Carousel';
+import Owner from './Owner';
+import Tag from './Tag';
 
-function Appartementpage(props) {
-  const Location = useLocation();
+function Appartementpage() {
+  const { id } = useParams(); // Récupère l'ID depuis l'URL
   const navigate = useNavigate();
 
-  const [selectedTab, setSelectedTab] = useState(null); 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); 
-  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false); 
-  const [isEquipmentsOpen, setIsEquipmentsOpen] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(null);
 
   useEffect(() => {
     fetchAppartementElements();
-  }, []); 
+  }, [id]); // Recharger les données si l'ID change
 
   function fetchAppartementElements() {
-    // Vérifier si l'ID est présent dans les paramètres de la route
-    if (!Location.state || !Location.state.appartementId) {
-      // Si l'ID est manquant, rediriger vers la page d'erreur
-      navigate('/error', { replace: true });
+    if (!id) {
+      navigate('/error', { replace: true }); // Redirige si l'ID est manquant
       return;
     }
 
-    fetch("api.json")
-      .then(res => res.json())
+    fetch('/api.json')
+      .then((res) => res.json())
       .then((tabs) => {
-        // Recherche de l'appartement correspondant à l'ID
-        const selectedTab = tabs.find(tab => tab.id === Location.state.appartementId);
+        const selectedTab = tabs.find(tab => tab.id === id);
 
         if (!selectedTab) {
-          // Si l'appartement n'est pas trouvé, rediriger vers la page d'erreur
-          navigate('/error', { replace: true });
-          return; // Arrêter l'exécution si l'appartement n'est pas trouvé
+          navigate('/error', { replace: true }); // Redirige si l'ID est incorrect
+          return;
         }
 
-        setSelectedTab(selectedTab); // Mettre à jour l'état avec l'appartement sélectionné
-        navigate(`/Appartements/${selectedTab.id}`, { replace: true }); // Mettre à jour l'URL avec l'ID de l'appartement
+        setSelectedTab(selectedTab);
       })
       .catch((error) => {
-        console.error("Erreur de récupération des données:", error);
-        navigate('/error', { replace: true }); // Rediriger vers la page d'erreur en cas d'erreur de récupération
+        console.error('Erreur de récupération des données:', error);
+        navigate('/error', { replace: true });
       });
   }
 
-  // Si l'appartement n'est pas encore sélectionné (avant la récupération des données), rien n'est affiché.
   if (selectedTab == null) return null;
 
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + selectedTab.pictures.length) % selectedTab.pictures.length);
-  };
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % selectedTab.pictures.length);
-  };
-
-  const hasMultipleImages = selectedTab.pictures.length > 1;
-
   return (
-    <div className='main_container'>
-      {/* Carrousel d'images */}
-      <div className="carousel-container">
-        {hasMultipleImages && (
-          <div className="carousel-button prev" onClick={prevImage}>
-            <i className="fa-solid fa-chevron-left"></i>
-          </div>
-        )}
-
-        <div className="carousel-image-container">
-          <img
-            className='apartement_img'
-            src={selectedTab.pictures[currentImageIndex]}
-            alt={`Appartement_image_${currentImageIndex}`}
-          />
-          {hasMultipleImages && (
-            <div className="image-counter">
-              {currentImageIndex + 1} / {selectedTab.pictures.length}
-            </div>
-          )}
-        </div>
-
-        {hasMultipleImages && (
-          <div className="carousel-button next" onClick={nextImage}>
-            <i className="fa-solid fa-chevron-right"></i>
-          </div>
-        )}
-      </div>
-
-      {/* Informations sur l'appartement */}
-      <div className='Appartement_group'>
-        <div className='Appartement_describ'>
+    <div className="main_container">
+      <Carousel pictures={selectedTab.pictures} />
+      <div className="Appartement_group">
+        <div className="Appartement_describ">
           <h1>{selectedTab.title}</h1>
           <h2>{selectedTab.location}</h2>
-          <div className='Tags'>
+          <div className="Tags">
             {selectedTab.tags.map((tag, index) => (
-              <span key={index}>{tag}</span>
+              <Tag key={index} text={tag} />
             ))}
           </div>
         </div>
-
-        <div className='appartement_owner'>
-          <div className='ownerpp'>
-            <h3 className='Ad'>
-              <span className='host'>{selectedTab.host.name}</span>
-            </h3>
-            <img className='pp' src={selectedTab.host.picture} alt="proprio" />
-          </div>
-
-          <div className='raiting'>
-            {[1, 2, 3, 4, 5].map((num) => (
-              <span className={selectedTab.rating >= num ? "on" : ""} key={num}>★</span>
-            ))}
-          </div>
-        </div>
+        <Owner host={selectedTab.host} rating={selectedTab.rating} />
       </div>
-
-      {/* Sections déroulantes */}
-      <div className='dropdown'>
-        <div className='description'>
-          <p className='title_description' onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}>
-            <span>Description</span>
-            <span>
-              <i className={`fas ${isDescriptionOpen ? "fa-chevron-up" : "fa-chevron-down"}`}></i>
-            </span>
-          </p>
-          {isDescriptionOpen && <p className="description_content">{selectedTab.description}</p>}
-        </div>
-
-        <div className="equipements">
-          <p className="title_description" onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}>
-            <span>Équipements</span>
-            <span><i className={`fas ${isEquipmentsOpen ? "fa-chevron-up" : "fa-chevron-down"}`}></i></span>
-          </p>
-          {isEquipmentsOpen && (
-            <ul className="list">
-              {selectedTab.equipments.map((equipment, index) => (<li key={index}>{equipment}</li>))}
-            </ul>
-          )}
-        </div>
+      <div className="dropdown">
+        <Dropdown title="Description" content={selectedTab.description} />
+        <Dropdown title="Équipements" content={selectedTab.equipments} isList />
       </div>
     </div>
   );

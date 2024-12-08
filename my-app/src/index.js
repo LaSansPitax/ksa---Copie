@@ -24,25 +24,10 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     element: <HeaderFooterLayout />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/Appartements",
-        element: <Appartementpage />,
-      },
-
-       {
-        path: "/Appartements/:id",
-        element: <Appartementpage />,
-      },
- 
- 
-      {
-        path: "/About",
-        element: <About />,
-      },
+      { path: "/", element: <Home /> },
+      { path: "/Appartements", element: <Appartementpage /> },
+      { path: "/Appartements/:id", element: <Appartementpage /> },
+      { path: "/About", element: <About /> },
     ],
   },
 ]);
