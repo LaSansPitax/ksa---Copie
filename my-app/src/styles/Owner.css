@@ -59,7 +59,21 @@
 
 @media (min-width:0px) and (max-width:320px) {
     
+.owner-name-container {
+        width: 78px;
+        font-size: 13px;
 
+
+    }
+
+
+    .owner-container {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+   
+    }
 
     .ownerpp {
         display: flex;
@@ -84,6 +98,12 @@
         color: rgba(227, 227, 227, 1);
     }
 
+        .owner-rating {
+            display: flex;
+            font-size: 20px;
+            align-items: flex-end;
+
+        }
 
 
 }
